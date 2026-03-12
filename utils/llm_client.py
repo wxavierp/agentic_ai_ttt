@@ -6,7 +6,7 @@ load_dotenv()
 
 
 def get_client() -> OpenAI:
-    endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+    endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")+"openai/v1"
     api_key = os.getenv("AZURE_OPENAI_API_KEY")
     return OpenAI(
         base_url=endpoint,
@@ -15,4 +15,4 @@ def get_client() -> OpenAI:
 
 
 def get_deployment_name() -> str:
-    return os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "")
+    return os.getenv("AZURE_DEPLOYMENT_NAME", "")

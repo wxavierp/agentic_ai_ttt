@@ -105,3 +105,7 @@ cython_debug/
 
 # Environment variables file
 .env
+
+# Virtural environment
+.venv/
+venv/*
