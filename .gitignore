@@ -108,4 +108,4 @@ cython_debug/
 
 # Virtural environment
 .venv/
-venv/*
+.venv/*
