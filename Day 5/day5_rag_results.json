@@ -1,0 +1,64 @@
+{
+  "notebook": "Day5C_RAG_Pipeline",
+  "exported_at": "2026-03-24T12:41:22.950899",
+  "model": "gpt-4o",
+  "embedding_model": "text-embedding-ada-002",
+  "knowledge_base_size": 20,
+  "results": [
+    {
+      "question": "What GST rate applies to cloud software exported to a US company with LUT filed?",
+      "answer": "Cloud software exported to a US company with a Letter of Undertaking (LUT) filed qualifies as an export of services and is treated as zero-rated supply under GST. Therefore, no GST applies to such exports [IGST Act S.16(1)] and [Notification 01/2023-IT(Rate) S.4].",
+      "chunks_used": [
+        "gst_notification_01_2023",
+        "gst_export_001",
+        "gst_composition_001"
+      ]
+    },
+    {
+      "question": "A company avails legal services from a senior advocate. Does GST apply and who pays?",
+      "answer": "Yes, GST applies to legal services provided by a senior advocate. Under the Reverse Charge Mechanism (RCM) as per Section 9(3) of the CGST Act, the recipient of the service (the company) is required to pay the GST instead of the supplier (the senior advocate) [CGST Act 2017 §9(3)].",
+      "chunks_used": [
+        "gst_rcm_001",
+        "gst_composition_001",
+        "tds_194j_001"
+      ]
+    },
+    {
+      "question": "What are the income tax slabs under the new tax regime for FY 2025-26?",
+      "answer": "The income tax slabs under the new tax regime for FY 2025-26 are as follows [Income Tax Act 1961 §115BAC]:\n\n- Nil tax for income up to Rs 3 lakh.\n- 5% for income between Rs 3 lakh and Rs 7 lakh.\n- 10% for income between Rs 7 lakh and Rs 10 lakh.\n- 15% for income between Rs 10 lakh and Rs 12 lakh.\n- 20% for income between Rs 12 lakh and Rs 15 lakh.\n- 30% for income above Rs 15 lakh.\n\nAdditionally, a standard deduction of Rs 75,000 is available, and under Section 87A, there is zero tax for income up to Rs 7 lakh.",
+      "chunks_used": [
+        "new_tax_regime_001",
+        "corp_tax_rates_001",
+        "advance_tax_001"
+      ]
+    },
+    {
+      "question": "When is GSTR-3B due for a monthly taxpayer? What does it cover?",
+      "answer": "GSTR-3B is due by the 20th of the following month for monthly taxpayers. It is a summary return that covers the payment of GST liability for the relevant tax period [CGST Rules 2017 §Rule 61].",
+      "chunks_used": [
+        "gst_gstr3b_001",
+        "gst_gstr1_001",
+        "tds_return_001"
+      ]
+    },
+    {
+      "question": "Can I claim ITC on food expenses incurred for office employees under GST?",
+      "answer": "No, you cannot claim ITC on food expenses incurred for office employees under GST. Section 17(5) of the CGST Act specifically blocks ITC on goods or services related to food and beverages, except where such inward supply is used for making an outward taxable supply of the same category or as an element of a composite or mixed supply [CGST Act 2017 §16, §17(5)].",
+      "chunks_used": [
+        "gst_itc_001",
+        "gst_works_contract_001",
+        "gst_notification_01_2023"
+      ]
+    }
+  ],
+  "comparison": {
+    "question": "What GST rate applies to cloud software exported to a US company with LUT filed?",
+    "without_rag": "When cloud software is exported to a US company under a Letter of Undertaking (LUT), it qualifies as a \"zero-rated supply\" under GST. This means no GST is charged on the export. Filing an LUT allows the exporter to avoid paying IGST on the supply and claim input tax credit (ITC, if any) on related expenses. Ensure all conditions for export of services under GST are met, such as receipt of payment in convertible foreign exchange.",
+    "with_rag": "Cloud software exported to a US company with an LUT filed qualifies as an export of services and is treated as zero-rated under GST, meaning no GST applies [IGST Act S.16(1); Notification 01/2023-IT(Rate) S.4].",
+    "chunks_used": [
+      "gst_notification_01_2023",
+      "gst_export_001",
+      "gst_composition_001"
+    ]
+  }
+}
